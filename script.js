@@ -1,7 +1,8 @@
 var video_output = document.getElementById('video-container');
+
 document.write('another test here');
+
 function login(form) {
-	document.write('testing');
 	var phone = window.phone = PHONE({
 		number			: form.username.value || 'Anonymous',
 		publish_key		: 'pub-c-6d6048aa-8fd4-4ca8-b8d2-82b62abfc65a',
@@ -14,6 +15,7 @@ function login(form) {
 	});
 	return false; //So the form is kept on the screen
 }
+
 function makeCall(form) {
 	if (!window.phone) alert('Please make a login.');
 	else phone.dial(form.number.value);
