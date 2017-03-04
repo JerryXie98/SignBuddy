@@ -8,7 +8,7 @@ function login(form) {
 		publish_key		: 'pub-c-6d6048aa-8fd4-4ca8-b8d2-82b62abfc65a',
 		subscribe_key	: 'sub-c-95ec0bae-0107-11e7-b54e-0619f8945a4f',
 	});
-	phone.ready(function(){form.username.style.background='#55ff5b'; });
+	phone.ready(function(){form.username.style.background='#55ff5b'; document.write('ready'); });
 	phone.receive(function(session){
 		session.connected(function(session) {video_output.appendChild(session.video); });
 		session.ended(function(session) {video_output.innerHTML=''; });
