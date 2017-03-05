@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width initial-scale=1.0'>
+	<meta name='description' content='stuff'>
+	<meta name='author' content='Andrew Nguyen'>
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+	<link type='text/css' rel='stylesheet' href='index.css'>
+	<title>MediSign</title>
+</head>
+<body>
+	<div id='maindiv'>
+	<div id='cameraframe'>
+		<iframe src='http://172.17.107.172:8080' id='webcam' scrolling='yes'></iframe>
+	</div>
+	<div>
+	<p id='sign-words'>jhgfds</p>
+	</div>
+	</div>
+</body>
+	<script>
+	var wordSign = document.getElementById('sign-words');
+
+function mainFunc (index) {
+	if(index == 200) {return;}
+	setTimeout(function(){
+		readText('../wordLog');
+		mainFunc(index++);
+	},700);
+}
+
+function readText(file)
+{
+	//this would be so much easier if i knew jquery smh
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var readWord = rawFile.responseText;
+                wordSign.innerHTML = readWord;
+				console.log('Writing this word: ' + readWord);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+mainFunc(0);
+	</script>
+</html>
