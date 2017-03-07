@@ -1,5 +1,4 @@
 # SignBuddy
-![SignBuddy](http://i.imgur.com/v9KuaJp.png/ "SignBuddy")  
 Devpost: https://devpost.com/software/cuhacking
 
 ## Overview
