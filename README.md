@@ -1,5 +1,5 @@
 # SignBuddy
-![SignBuddy](http://i.imgur.com/v9KuaJp.png/ "SignBuddy")
+![SignBuddy](http://i.imgur.com/v9KuaJp.png/ "SignBuddy")  
 Devpost: https://devpost.com/software/cuhacking
 
 ## Overview
@@ -10,10 +10,9 @@ SignBuddy was the winner of best machine learning app at CUHacking 2017.
 
 To run it locally:
 * Clone the repository
-* Install all the packages located in `requirements.txt`
+* Install all the packages with `pip install -r requirements.txt`
 * Run server with `python app.py`
 * Open a browser to the IP given from console
-* If it is working, you should see a blank page with the title `???`
 * Click the button (is this working?), OR manually navigate to `<app-ip-address>/videochat`
 
 ![SignBuddy2](http://i.imgur.com/9Z0Sjit.png/ "SignBuddy2")
