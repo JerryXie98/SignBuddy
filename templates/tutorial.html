@@ -1,12 +1,8 @@
 <html lang="en">
-
 	<head>
-		<title>...</title>
+		<title>SignBuddy</title>
+		<meta name='author' content='Jerry Xie'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="static/bootstrap.min.css">
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="static/style.css">
 		<script>
 		var chars = 'abcdefghijklmnopqrstuvwxyz';
 		$(document).ready(function() {
@@ -18,10 +14,10 @@
 						if (chars[ndx] == goal)
 							ndx = (ndx + 1) % chars.length;
 						var nextChar = chars[ndx];
-						var newText = 'Great job! Now try "' + nextChar + '"';
+						var line = 'OK';
 						$('#prompt').attr('class', nextChar);
 						$('#realimage').attr('src', 'asl/' + nextChar + '.gif');
-						$('#prompt').text(newText);
+						$('#prompt').text(line);
 					}
 				});
 			}, 200);
@@ -30,7 +26,8 @@
 	</head>
 
 	<body>
-		<a id="back_to_splash_link" class='hidden' href="/splash"><button class="btn btn-primary" id="back_to_splash">Home</button></a>
+		<img src=http://i.imgur.com/v9KuaJp.png/>
+		<a id="back_to_splash_link" class='hidden' href="/videochat"><button class="btn btn-primary" id="back_to_splash">Enter SignBuddy</button></a>
 		<div id="container">
 			<div class="lato" id="content" style="font-size:2px">
 				<div id="prompt" class="b">Make a b</div>
